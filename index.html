@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Javascript</title>
+</head>
+<body>
+    <script src="JS/java.js">
+</script>
+
+
+<h1>This is a Heading</h1>
+<p id="count">9</p>
+
+
+<div id="Mydiv" >Myelement</div>
+
+<div id="java">Javascript</div>
+
+<img src="imgs/Lecture1/70s Party.png" alt="" width="300">
+<button id="mybutton">click here</button>
+<div id="ello"><a href="https://maps.app.goo.gl/7piedAhZWHVS1ieZ9">school</a></div>
+<iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d221287.51342371863!2d30.867518242255237!3d29.93291509571744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145845e88515dedd%3A0xcabc7338023e696e!2z2KzZhdi52Ycg2YPYp9mB2YrZhw!5e0!3m2!1sen!2seg!4v1722697626126!5m2!1sen!2seg" width="400" height="300" style="border:0;"
+ allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+ <button>stop</button>
+<script>
+setInterval(function (){
+   // console.log('msg');
+}, 2000)
+let div = document.getElementById("count")
+
+function countdown(){
+    div.innerHTML -= 1
+
+    if(div.innerHTML === "0"){
+        clearInterval(counter)
+    }
+}
+let counter=setInterval(countdown,1000)
+
+setTimeout(function(){
+    console.log("msg")
+}, 5000
+)
+function sayMsg(user, age){
+    console.log(`i am ${user} age is ${age}`)
+}
+let counting = setTimeout(sayMsg , 3000 ,'hala','15')
+//const button = document.getElementById("mybutton")
+//const div = document.getElementById("ello")
+//function change(){
+   // div.innerHTML = '<a href="https://maps.app.goo.gl/bKgmu3Wo2UdcrMA28">FUN</a>'
+//}
+//button.addEventListener( onclick , change())
+
+let moreSubjects = ["French" , "biology" , "chemistry"]
+
+let myJava = document.getElementById("java");
+console.log(myJava.innerHTML)
+myJava.innerHTML = "hello"
+console.log(myJava.innerHTML)
+
+document.images[0].width ="500"
+document.images[0].src ="imgs/Lecture1/s.png"
+
+
+
+    let myElement= document.getElementById("Mydiv");
+console.log(myElement);
+let a = 20;
+a = a + 10
+console.log(a)
+
+let price = 100;
+let discount = true;
+let discountamount = 40;
+let country = "Egypt"
+
+if(discount === true)
+{price -= discountamount}
+else if(country === "Egypt")
+{price = price - 40}
+else if (country === "Syria")
+{price -= 33}
+else{price = 100}
+console.log(price)
+
+let subjects = ["science" , "math" , "english" , "arabic"]
+console.log(subjects[0])
+console.log(subjects[2])
+subjects.unshift("arabic")
+console.log(subjects)
+
+
+
+
+for(let i = 0; i < moreSubjects.length; i++ )
+console.log("hello"+" "+"moreSubjec")
+
+let allSubjects = subjects.concat(moreSubjects , [1,2,3])
+console.log(allSubjects)
+
+console.log(subjects.indexOf("science"))
+
+//const fruits = ["apple","mango","orange","lemon"];
+//console.log(fruits.slice(2,4))
+const fruits = ["apple","mango","orange","lemon"];
+fruits.splice(2,4,"avocado")
+console.log(fruits)
+
+function sumNumbers(){
+    var n1 =parseInt(document.getElementById(`n1`).value);
+    var n2 =parseInt(document.getElementById(`n2`).value);
+
+    document.getElementById('display').innerHTML = n1+n2;
+}
+
+//function calc(...numbers) {
+    ///let result = 0;
+    //for (let i = 0; i < number.length; i++) {
+       // result += numbers[i];
+        
+    //}
+    //return `final result is ${result}`;
+//}
+//console.log(calc(10, 20, 30, 40, 70, 90, 10));
+</script>
+    first number:<input type="number" id="n1" name="first">
+second number:<input type="number" id="n2" name="second">
+<button onclick="sumNumbers()">sum numbers</button>
+<p id="display">result here</p>
+</body>
+</html>
